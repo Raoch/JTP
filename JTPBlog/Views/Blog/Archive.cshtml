@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ViewModels.BlogPostVM>
+@{
+    ViewBag.Title = "Archive";
+}
+<h2>@ViewBag.Title.</h2>
+<div id="Container">
+    <div id="header">
+
+    </div>
+    <div id="body" ng-controller="BlogCtrl as bc" ng-init="bc.initBlogs(@Newtonsoft.Json.JsonConvert.SerializeObject(@Model))">
+        <div id="filters">
+            <div id="search">
+                Search: <input id="searchText" ng-model="bc.searchText" />
+            </div>
+            <div id="tags">
+
+            </div>
+        </div>
+        @foreach (var blog in Model)
+        {                        
+        <div class="sidebar-list">
+            @Html.ActionLink(blog.DateCreated.ToShortDateString() + " | " + blog.Title, "BlogPost", "Blog", new { blogID = blog.BlogPostID }, new { @class = "sidebar-list" })
+        </div>
+        }
+    </div>
+</div>

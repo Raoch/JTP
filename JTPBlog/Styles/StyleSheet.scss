@@ -1,0 +1,9 @@
+﻿
+
+@function calcTagSize($count) {
+    @return $count *2;
+}
+.testscs {
+    margin: auto;
+    font-size: calcTagSize(20px);
+}

@@ -1,0 +1,13 @@
+C:\Users\Josh\source\repos\JTPBlog\ViewModelServiceInterfaces\bin\Debug\netstandard2.0\JTPBlog.ViewModelServiceInterfaces.deps.json
+C:\Users\Josh\source\repos\JTPBlog\ViewModelServiceInterfaces\bin\Debug\netstandard2.0\JTPBlog.ViewModelServiceInterfaces.dll
+C:\Users\Josh\source\repos\JTPBlog\ViewModelServiceInterfaces\bin\Debug\netstandard2.0\JTPBlog.ViewModelServiceInterfaces.pdb
+C:\Users\Josh\source\repos\JTPBlog\ViewModelServiceInterfaces\bin\Debug\netstandard2.0\JTPBlog.ViewModelInterfaces.dll
+C:\Users\Josh\source\repos\JTPBlog\ViewModelServiceInterfaces\bin\Debug\netstandard2.0\JTPBlog.ViewModels.dll
+C:\Users\Josh\source\repos\JTPBlog\ViewModelServiceInterfaces\bin\Debug\netstandard2.0\JTPBlog.ViewModels.pdb
+C:\Users\Josh\source\repos\JTPBlog\ViewModelServiceInterfaces\bin\Debug\netstandard2.0\JTPBlog.ViewModelInterfaces.pdb
+C:\Users\Josh\source\repos\JTPBlog\ViewModelServiceInterfaces\obj\Debug\netstandard2.0\JTPBlog.ViewModelServiceInterfaces.csprojResolveAssemblyReference.cache
+C:\Users\Josh\source\repos\JTPBlog\ViewModelServiceInterfaces\obj\Debug\netstandard2.0\JTPBlog.ViewModelServiceInterfaces.csproj.CoreCompileInputs.cache
+C:\Users\Josh\source\repos\JTPBlog\ViewModelServiceInterfaces\obj\Debug\netstandard2.0\JTPBlog.ViewModelServiceInterfaces.AssemblyInfoInputs.cache
+C:\Users\Josh\source\repos\JTPBlog\ViewModelServiceInterfaces\obj\Debug\netstandard2.0\JTPBlog.ViewModelServiceInterfaces.AssemblyInfo.cs
+C:\Users\Josh\source\repos\JTPBlog\ViewModelServiceInterfaces\obj\Debug\netstandard2.0\JTPBlog.ViewModelServiceInterfaces.dll
+C:\Users\Josh\source\repos\JTPBlog\ViewModelServiceInterfaces\obj\Debug\netstandard2.0\JTPBlog.ViewModelServiceInterfaces.pdb

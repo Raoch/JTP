@@ -1,0 +1,8 @@
+C:\Users\Josh\source\repos\JTPBlog\ViewModelInterfaces\bin\Debug\netstandard2.0\JTPBlog.ViewModelInterfaces.deps.json
+C:\Users\Josh\source\repos\JTPBlog\ViewModelInterfaces\bin\Debug\netstandard2.0\JTPBlog.ViewModelInterfaces.dll
+C:\Users\Josh\source\repos\JTPBlog\ViewModelInterfaces\bin\Debug\netstandard2.0\JTPBlog.ViewModelInterfaces.pdb
+C:\Users\Josh\source\repos\JTPBlog\ViewModelInterfaces\obj\Debug\netstandard2.0\JTPBlog.ViewModelInterfaces.csproj.CoreCompileInputs.cache
+C:\Users\Josh\source\repos\JTPBlog\ViewModelInterfaces\obj\Debug\netstandard2.0\JTPBlog.ViewModelInterfaces.AssemblyInfoInputs.cache
+C:\Users\Josh\source\repos\JTPBlog\ViewModelInterfaces\obj\Debug\netstandard2.0\JTPBlog.ViewModelInterfaces.AssemblyInfo.cs
+C:\Users\Josh\source\repos\JTPBlog\ViewModelInterfaces\obj\Debug\netstandard2.0\JTPBlog.ViewModelInterfaces.dll
+C:\Users\Josh\source\repos\JTPBlog\ViewModelInterfaces\obj\Debug\netstandard2.0\JTPBlog.ViewModelInterfaces.pdb

@@ -1,0 +1,8 @@
+C:\Users\Josh\source\repos\ProjectWAT\Data.Interfaces\bin\Debug\Data.Interfaces.dll
+C:\Users\Josh\source\repos\ProjectWAT\Data.Interfaces\bin\Debug\Data.Interfaces.pdb
+C:\Users\Josh\source\repos\ProjectWAT\Data.Interfaces\obj\Debug\Data.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Josh\source\repos\ProjectWAT\Data.Interfaces\obj\Debug\Data.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Josh\source\repos\ProjectWAT\Data.Interfaces\obj\Debug\Data.Interfaces.dll
+C:\Users\Josh\source\repos\ProjectWAT\Data.Interfaces\obj\Debug\Data.Interfaces.pdb
+C:\Users\Josh\source\repos\ProjectWAT\Data.Interfaces\bin\Debug\Dapper.dll
+C:\Users\Josh\source\repos\ProjectWAT\Data.Interfaces\bin\Debug\Dapper.xml

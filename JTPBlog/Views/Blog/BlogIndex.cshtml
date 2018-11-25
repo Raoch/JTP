@@ -1,0 +1,41 @@
+﻿@model JTPBlog.Models.PaginatedList<ViewModels.BlogPostVM>
+<div ng-controller="BlogCtrl as bc">
+        <!-- Blog Entries Column -->
+        <div ng-init="bc.initBlogs(@Newtonsoft.Json.JsonConvert.SerializeObject(@Model))">
+            <h1 class="page-header page-title">
+                @{ var t = ViewData["CurrentCategory"] ?? "All Blogs"; }
+                @t
+                <small>Secondary Text</small>
+            </h1>
+            <!-- Blog Posts -->
+            <div ng-repeat="blog in bc.blogs">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img class="img-responsive pull-right" ng-src="/Images/Philosophy4.jpg" alt="post banner">
+                    </div>
+                    <div class="col-md-9">
+                        <span class="post-title-index">
+                            <a class="small-text" href="http://localhost:61143/Blog/BlogPost?blogID={{blog.BlogPostID}}">{{blog.Title}}</a>
+                        </span>
+                        <p class="small-text">
+                            by <a href="index.php">{{blog.Author}} JTP </a><span class="glyphicon glyphicon-time"></span> Posted on {{blog.DateCreated | date: mediumDate}} | {{blog.Category}}
+                        </p>
+                        <p class="small-text testscs"> {{blog.ContentText | limitTo:580 }}</p>
+                        <a class="btn pull-right btn-default" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+                    </div>
+                </div><!-- row -->
+                <hr>
+            </div>
+            <!-- Pager -->
+            @{
+            var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+            }
+
+            @Html.ActionLink("Previous", "BlogIndex", "Blog", new { sortOrder = "date_desc", category = ViewData["CurrentCategory"], currentFilter = ViewData["CurrentFilter"], page = Model.PageIndex - 1 }, new { @class = "btn btn-default " + prevDisabled })
+            @Html.ActionLink("Next", "BlogIndex", "Blog", new { sortOrder = "date_desc", category = ViewData["CurrentCategory"], currentFilter = ViewData["CurrentFilter"], page = Model.PageIndex + 1 }, new { @class = "btn btn-default " + nextDisabled })
+        </div>
+    <!-- /.row -->
+    <hr>
+</div>

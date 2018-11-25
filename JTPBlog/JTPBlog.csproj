@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.6" />
+    <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
+    <PackageReference Include="BundlerMinifier.Core" Version="2.8.391" />
+    <PackageReference Include="Dapper" Version="1.50.5" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
+    <PackageReference Include="MySql.Data" Version="8.0.12" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data.Interfaces\JTPBlog.Data.Interfaces.csproj" />
+    <ProjectReference Include="..\Data\JTPBlog.Data.csproj" />
+    <ProjectReference Include="..\JTPBlog.Models\JTPBlog.Models.csproj" />
+    <ProjectReference Include="..\JTPBlog.Service.Interfaces\JTPBlog.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\JTPBlog.Services\JTPBlog.Services.csproj" />
+    <ProjectReference Include="..\ViewModelServiceInterfaces\JTPBlog.ViewModelServices.Interfaces.csproj" />
+    <ProjectReference Include="..\ViewModelServices\JTPBlog.ViewModelServices.csproj" />
+    <ProjectReference Include="..\ViewModels\JTPBlog.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\production\" />
+  </ItemGroup>
+
+</Project>

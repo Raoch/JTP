@@ -1,0 +1,42 @@
+﻿@model IEnumerable<JTPBlog.Models.BlogPost>
+
+<body ng-controller="BlogCtrl as bc">
+    <!-- Page Content -->
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8" ng-init="bc.initBlogs(@Newtonsoft.Json.JsonConvert.SerializeObject(@Model))">
+            <h1 class="page-header">
+                All Blogs
+                <small>Secondary Text</small>
+            </h1>
+            <!-- First Blog Post -->
+            <div ng-repeat="blog in bc.blogs[0]">
+                <h2>
+                    <a class="postTitle" href="#">{{blog.Title}}</a>
+                    @Html.ActionLink(">", "BlogPost", "Blog")
+                </h2>
+                <p class="">
+                    by <a href="index.php">{{blog.Author}} </a><span class="glyphicon glyphicon-time"></span> Posted on {{blog.Date}}
+                </p>
+                <p></p>
+                <hr>
+                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                <p> {{blog.Content | limitTo:120 }}</p>
+                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <hr>
+            </div>
+
+            <!-- Pager -->
+            <ul class="pager">
+                <li class="previous">
+                    <a href="#">&larr; Older</a>
+                </li>
+                <li class="next">
+                    <a href="#">Newer &rarr;</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.row -->
+    <hr>
+</body>

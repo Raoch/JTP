@@ -1,0 +1,16 @@
+C:\Users\Josh\source\repos\ProjectWAT\Data\bin\Debug\Data.dll
+C:\Users\Josh\source\repos\ProjectWAT\Data\bin\Debug\Data.pdb
+C:\Users\Josh\source\repos\ProjectWAT\Data\bin\Debug\Dapper.dll
+C:\Users\Josh\source\repos\ProjectWAT\Data\bin\Debug\Data.Interfaces.dll
+C:\Users\Josh\source\repos\ProjectWAT\Data\bin\Debug\Google.Protobuf.dll
+C:\Users\Josh\source\repos\ProjectWAT\Data\bin\Debug\MySql.Data.dll
+C:\Users\Josh\source\repos\ProjectWAT\Data\bin\Debug\Data.Interfaces.pdb
+C:\Users\Josh\source\repos\ProjectWAT\Data\bin\Debug\Dapper.xml
+C:\Users\Josh\source\repos\ProjectWAT\Data\bin\Debug\Google.Protobuf.xml
+C:\Users\Josh\source\repos\ProjectWAT\Data\bin\Debug\MySql.Data.xml
+C:\Users\Josh\source\repos\ProjectWAT\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\Josh\source\repos\ProjectWAT\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\Josh\source\repos\ProjectWAT\Data\obj\Debug\Data.dll
+C:\Users\Josh\source\repos\ProjectWAT\Data\obj\Debug\Data.pdb
+C:\Users\Josh\source\repos\ProjectWAT\Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Josh\source\repos\ProjectWAT\Data\bin\Debug\Newtonsoft.Json.xml

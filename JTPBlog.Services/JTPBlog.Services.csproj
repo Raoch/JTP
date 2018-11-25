@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="3.3.29.12" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.27.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data.Interfaces\JTPBlog.Data.Interfaces.csproj" />
+    <ProjectReference Include="..\JTPBlog.Models\JTPBlog.Models.csproj" />
+    <ProjectReference Include="..\JTPBlog.Service.Interfaces\JTPBlog.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

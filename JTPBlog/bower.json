@@ -1,0 +1,11 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "angular": "v1.6.8",
+    "bootstrap": "v3.0.0",
+    "bootstrap-tags": "v1.1.6",
+    "angular-typeahead": "v1.0.2",  
+    "bootstrap3-typeahead": "v4.0.0"
+  }
+}

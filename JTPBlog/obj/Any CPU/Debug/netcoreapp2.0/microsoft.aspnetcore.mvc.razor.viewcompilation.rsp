@@ -1,0 +1,16 @@
+C:\Projects\JTPBlog\JTPBlog
+--output-path=obj\Any CPU\Debug\netcoreapp2.0\
+--application-name=JTPBlog
+--content-root=C:\Projects\JTPBlog\JTPBlog
+--file=C:\Projects\JTPBlog\JTPBlog\Views\Blog\Archive.cshtml
+--file=C:\Projects\JTPBlog\JTPBlog\Views\Blog\BlogIndex.cshtml
+--file=C:\Projects\JTPBlog\JTPBlog\Views\Blog\BlogPost.cshtml
+--file=C:\Projects\JTPBlog\JTPBlog\Views\Blog\CreateBlogPost.cshtml
+--file=C:\Projects\JTPBlog\JTPBlog\Views\Blog\Library.cshtml
+--file=C:\Projects\JTPBlog\JTPBlog\Views\Home\About.cshtml
+--file=C:\Projects\JTPBlog\JTPBlog\Views\Home\Contact.cshtml
+--file=C:\Projects\JTPBlog\JTPBlog\Views\Home\Index.cshtml
+--file=C:\Projects\JTPBlog\JTPBlog\Views\Shared\Error.cshtml
+--file=C:\Projects\JTPBlog\JTPBlog\Views\Shared\_Layout.cshtml
+--file=C:\Projects\JTPBlog\JTPBlog\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=C:\Projects\JTPBlog\JTPBlog\Views\_ViewStart.cshtml

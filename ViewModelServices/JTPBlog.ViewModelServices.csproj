@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JTPBlog.Models\JTPBlog.Models.csproj" />
+    <ProjectReference Include="..\JTPBlog.Service.Interfaces\JTPBlog.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\ViewModelServiceInterfaces\JTPBlog.ViewModelServices.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

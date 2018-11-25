@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "grunt": "1.0.1",
+    "grunt-contrib-concat": "1.0.1",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-minify-html": "2.1.0",
+    "grunt-replace": "1.0.1",
+    "grunt-contrib-cssmin": "1.0.2",
+    "grunt-tinyimg": "1.0.0",
+    "grunt-contrib-uglify-es": "3.3.0",
+    "grunt-sass": "^2.1.0"
+  }
+}

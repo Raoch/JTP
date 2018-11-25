@@ -1,0 +1,53 @@
+﻿@model IEnumerable<JTPBlog.Models.Tag>
+<!-- Blog Sidebar Widgets Column -->
+<div id="right-sidebar">
+    <!-- Blog Search Well -->
+    <div class="well">
+        @using (Html.BeginForm())
+        {
+            <p>
+                <h4>Blog Search</h4>
+                <div class="input-group">
+                    <input id="SearchString" name="SearchString" class="form-control" type="text" value=@ViewBag.CurrentFilter />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" value="Search">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </p>
+        }
+    </div>
+    <!-- Blog Categories Well -->
+    <div class="well">
+        <h4 class="sub-title">Tags</h4>
+        <div class="row">
+            <div class="col-md-12">
+                @foreach (var tag in Model)
+                {                        
+                    <div class="sidebar-list">@Html.ActionLink(tag.Name, "BlogIndex", "Blog", new { sortOrder = "Date", category = tag.Name }, new { @class = "sidebar-list" })</div>
+                }
+            </div>
+            <!-- /.col-lg-6 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- Side Widget Well -->
+    <div class="well">
+        <h4>Newsletter Sign Up!</h4>
+        <p>Subscribe to our weekly Newsletter for FREE and receive updates on new posts</p>
+        @using (Html.BeginForm())
+        {
+            <p>
+                <div class="input-group">
+                    <input id="SearchString" name="SearchString" class="form-control" type="text" value=@ViewBag.EmailSignUp />
+                    <span class="input-group-btn">
+                        <button class="btn btn-danger" value="Search">
+                            <span class="glyphicon ">Submit </span>
+                        </button>
+                    </span>
+                </div>
+            </p>
+        }
+    </div>
+</div>

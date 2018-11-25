@@ -1,0 +1,12 @@
+C:\Users\Josh\source\repos\JTPBlog\JTPBlog.Models\bin\Debug\JTPBlog.Models.dll
+C:\Users\Josh\source\repos\JTPBlog\JTPBlog.Models\bin\Debug\JTPBlog.Models.pdb
+C:\Users\Josh\source\repos\JTPBlog\JTPBlog.Models\obj\Debug\JTPBlog.Models.csprojResolveAssemblyReference.cache
+C:\Users\Josh\source\repos\JTPBlog\JTPBlog.Models\obj\Debug\JTPBlog.Models.csproj.CoreCompileInputs.cache
+C:\Users\Josh\source\repos\JTPBlog\JTPBlog.Models\obj\Debug\JTPBlog.Models.dll
+C:\Users\Josh\source\repos\JTPBlog\JTPBlog.Models\obj\Debug\JTPBlog.Models.pdb
+C:\Projects\JTPBlog\JTPBlog.Models\bin\Debug\JTPBlog.Models.dll
+C:\Projects\JTPBlog\JTPBlog.Models\bin\Debug\JTPBlog.Models.pdb
+C:\Projects\JTPBlog\JTPBlog.Models\obj\Debug\JTPBlog.Models.csproj.CoreCompileInputs.cache
+C:\Projects\JTPBlog\JTPBlog.Models\obj\Debug\JTPBlog.Models.dll
+C:\Projects\JTPBlog\JTPBlog.Models\obj\Debug\JTPBlog.Models.pdb
+C:\Projects\JTPBlog\JTPBlog.Models\obj\Debug\JTPBlog.Models.csprojAssemblyReference.cache

@@ -1,0 +1,90 @@
+﻿@model JTPBlog.Models.PageViewModels.CreateBlogPageViewModel
+
+@{
+    ViewData["Title"] = "CreateBlogPost";
+}
+
+<h2>CreateBlogPost</h2>
+
+<hr />
+<div class="row" ng-controller="BlogCtrl as bc" ng-init="bc.initCreateBlogPost(@Newtonsoft.Json.JsonConvert.SerializeObject(@Model) )">
+    <div class="col-md-12">
+        <form asp-action="CreateBlogPost">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="col-md-6">
+                <label asp-for="Title" class="control-label">Title</label>
+                <input asp-for="Title" class="form-control" ng-model="bc.newBlogPostModel.Title" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            @*///////////////////////////////////////////////////////////////////////////////////*@
+            <div class="col-md-3">
+                <label asp-for="CategoryID" class="control-label">Category</label>
+                @*<input asp-for="CategoryID"ng-model="bc.newBlogPostModel.Category" />*@
+                <select class="form-control" ng-options="cat.ID as cat.Name for cat in bc.pageVM.Categories track by cat.ID" ng-model="bc.newBlogPostModel.CategoryID"></select>
+                <span asp-validation-for="CategoryID" class="text-danger"></span>
+            </div>
+
+            @*///////////////////////////////////////////////////////////////////////////////////*@
+
+
+            <div class="col-md-3">
+                <label asp-for="ImageURL" class="control-label">Image URL</label>
+                <input asp-for="ImageURL" class="form-control" ng-model="bc.newBlogPostModel.ImageURL" />
+                <span asp-validation-for="ImageURL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Description</label>
+                <input asp-for="Description" class="form-control" ng-model="bc.newBlogPostModel.Description" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div id="" class="form-group">
+                <label asp-for="Content" class="control-label">Content</label>
+
+                <div id="scrolling-container" class="form-group">
+                    <div id="editor" class="form-control" ng-model="bc.newBlogPostModel.Content">
+                    </div>
+                </div>
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <div class="col-form-label" for="poi">Tags</div>
+        <div class="">
+            <input type="text" class="form-control; col-md-4" id="poi" ng-model="bc.tagToAdd" /><span class="btn btn-info" ng-click="bc.addNewChoice(bc.tagToAdd)" value="+">+</span>
+        </div>
+
+        <div data-ng-repeat="field.Name in bc.choiceSet.choices track by field.ID" class="">
+            <div id="tagItem" ng-model="bc.choiceSet.choices[$index]">
+                {{field}}
+            </div>
+
+            <button type="button" class="btn btn-default btn-sm" ng-click="bc.removeChoice($index)" ng-show="bc.choiceSet.choices[].length > 1">
+                <span class="glyphicon glyphicon-minus"></span>
+            </button>
+        </div>
+
+            <div class="row">
+                <div class="col-form-label col-md-1" for="poi">Tags</div>
+                <div id="my-tag-list" class="tag-list col-md-11" ng-model="bc.tagss"></div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="form-group col-md-9">
+                    <div class="checkbox">
+                        <label><input type="checkbox" ng-model="bc.newBlogPostModel.IsPublished">Published?</label>
+                    </div>
+                </div>
+                <div class="form-group pull-right pull-right">
+                    <input type="submit" value="Create" class="btn btn-default" ng-click="bc.addNewBlogPost()" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
