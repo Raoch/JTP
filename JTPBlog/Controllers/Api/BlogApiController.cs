@@ -26,26 +26,26 @@ namespace JTPBlog.Controllers.Api
         [HttpPost]
         public async Task<int> PostBlog([FromBody]PostRequest bpToAdd)
         {
-            string s3TestObj;
+            S3DownloadObject s3TestObj;
             S3ObjectResponse s3TestObjs;
             S3ObjectResponse s3TestObjfilter;
+            List<string> filters = new List<string>() { "test/testBucketItem.pdf", "test/testBucketItem2.pdf", "test/testBucketItem3.pdf", "test/testBucketItem4.pdf", "test/testBucketItem5.pdf" };
+
+            S3ObjectResponse s3TestMultiGet;
             try {
-            //var s3TestObj = await s3Service.DownloadS3Objects();
-            s3TestObj = await s3Service.DownloadS3Object("jtp-blog", "test/testBucketItem.pdf");
+                //var s3TestObj = await s3Service.DownloadS3Objects();
+                s3TestObj = await s3Service.DownloadS3ObjectByName("jtp-blog", "test/testBucketItem.pdf");
 
-            s3TestObjs = await s3Service.DownloadS3Objects("jtp-blog", "test/testBucketItem");
+                s3TestObjs = await s3Service.DownloadS3ObjectsByPrefix("jtp-blog", "test/testBucketItem");
 
-            s3TestObjfilter = await s3Service.DownloadS3ObjectsWithFilter("jtp-blog", "test/testBucketItem", new List<string>() { "test/testBucketItem.pdf", "test/testBucketItem2.pdf", "test/testBucketItem3.pdf", "test/testBucketItem4.pdf", "test/testBucketItem5.pdf", } );
-            //var s3TestObj = await s3Service.DownloadS3ObjectsWithQuery((x => x.Key == "weewe"));
+                s3TestObjfilter = await s3Service.DownloadS3ObjectsWithFilter("jtp-blog", "test/testBucketItem", filters);
 
-            }  catch(Exception e)
-            {
-                var res = e;
+                s3TestMultiGet = await s3Service.DownloadS3ObjectsByListOfNames("jtp-blog", filters);
             }
-
-
-            //BlogPostVM blogPostToAdd = JsonConvert.DeserializeObject<BlogPostVM>(bpToAdd.Json);
-            //int blogPostID = blogPostVMService.CreateBlog(blogPostToAdd);
+            catch (Exception e) {
+                    var res = e;
+            }
+            
             return 1;
         }
         public async Task<BlogPostVM> GetBlogByID(int id)

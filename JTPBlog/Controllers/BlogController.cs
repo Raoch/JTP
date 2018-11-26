@@ -8,6 +8,8 @@ using JTPBlog.Models.PageViewModels;
 using ViewModels;
 using JTPBlog.Services.Interfaces;
 using System.Threading.Tasks;
+using System.Text;
+using System.IO;
 
 namespace JTPBlog.Controllers
 {
@@ -128,6 +130,12 @@ namespace JTPBlog.Controllers
             ViewBag.Message = "Create posts";
 
             return View(cbpvm);
+        }
+        public async virtual Task<FileContentResult> GetInvoice()
+        {
+            var result = await s3Service.DownloadS3ObjectByName("jtp-blog", "test/testBucketItem.pdf");
+
+            return new FileContentResult(Convert.FromBase64String(result.FileBaseString), "application/pdf");
         }
     }
 }
