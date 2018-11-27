@@ -10,6 +10,7 @@ using JTPBlog.Services.Interfaces;
 using System.Threading.Tasks;
 using System.Text;
 using System.IO;
+using System.IO.Compression;
 
 namespace JTPBlog.Controllers
 {
@@ -17,12 +18,12 @@ namespace JTPBlog.Controllers
     {
         IBlogPostVMService blogPostVMService;
         IS3Service s3Service;
+
         public BlogController(IBlogPostVMService blogPostVMService, IS3Service s3Service)
         {
             this.blogPostVMService = blogPostVMService;
             this.s3Service = s3Service;
         }
-
 
         public async Task<ActionResult> BlogPost(int blogID)
         {
@@ -136,6 +137,62 @@ namespace JTPBlog.Controllers
             var result = await s3Service.DownloadS3ObjectByName("jtp-blog", "test/testBucketItem.pdf");
 
             return File(Convert.FromBase64String(result.FileBaseString), "application/pdf", result.FileName);
+        }
+        public async Task<ActionResult> GetInvoices()
+        {
+            List<string> list = new List<string>() { "test/testBucketItem.pdf", "test/testBucketItem2.pdf", "test/testBucketItem3.pdf" };
+            var result = await s3Service.DownloadS3ObjectsByListOfNames("jtp-blog", list);
+            // get the source files
+            List<FileModel> sourceFiles = new List<FileModel>();
+            // ...
+
+            // the output bytes of the zip
+            byte[] fileBytes = null;
+
+            // create a working memory stream
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                // create a zip
+                using (ZipArchive zip = new ZipArchive(memoryStream, ZipArchiveMode.Create, true))
+                {
+                    // interate through the source files
+                    foreach (var f in  result.S3DownloadObjects)
+                    {
+                        // add the item name to the zip
+                        ZipArchiveEntry zipItem = zip.CreateEntry(f.FileName + "." + "pdf");
+                        // add the item bytes to the zip entry by opening the original file and copying the bytes 
+                        using (MemoryStream originalFileMemoryStream = new MemoryStream(Convert.FromBase64String(f.FileBaseString)))
+                        {
+                            using (Stream entryStream = zipItem.Open())
+                            {
+                                originalFileMemoryStream.CopyTo(entryStream);
+                            }
+                        }
+                    }
+                }
+                fileBytes = memoryStream.ToArray();
+            }
+
+            // download the constructed zip
+            Response.Headers.Add("Content-Disposition", "attachment; filename=download.zip");
+            return File(fileBytes, "application/zip");
+        }
+        public async virtual Task<FileResult> GetInvoicesOld()
+        {
+            List<string> list = new List<string>() { "test/testBucketItem.pdf", "test/testBucketItem2.pdf", "test/testBucketItem3.pdf" };
+            var result = await s3Service.DownloadS3ObjectsByListOfNames("jtp-blog", list);
+            MemoryStream outputStream = new MemoryStream();
+            outputStream.Seek(0, SeekOrigin.Begin);
+            //ZipFile zip = new ZipFile()
+            //foreach (var obj in result.S3DownloadObjects)
+            //{
+            //    var byteArray = Convert.FromBase64String(obj.FileBaseString);
+            //    using (var stream = new MemoryStream(file))
+            //    {
+            //        zip.AddEntry("invoice" + id + ".pdf", stream);
+            //    }
+            //}
+            return File(Convert.FromBase64String(result.S3DownloadObjects.FirstOrDefault().FileBaseString), "application/pdf", result.S3DownloadObjects.FirstOrDefault().FileName);
         }
     }
 }
