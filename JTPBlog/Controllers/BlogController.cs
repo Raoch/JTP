@@ -131,11 +131,11 @@ namespace JTPBlog.Controllers
 
             return View(cbpvm);
         }
-        public async virtual Task<FileContentResult> GetInvoice()
+        public async virtual Task<FileResult> GetInvoice()
         {
             var result = await s3Service.DownloadS3ObjectByName("jtp-blog", "test/testBucketItem.pdf");
 
-            return new FileContentResult(Convert.FromBase64String(result.FileBaseString), "application/pdf");
+            return File(Convert.FromBase64String(result.FileBaseString), "application/pdf", result.FileName);
         }
     }
 }
